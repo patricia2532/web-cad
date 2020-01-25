@@ -12,6 +12,12 @@
     <script src="https://use.fontawesome.com/dc4358b59e.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js">
+	</script>
+    
+    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
 </head>
 
 <body>
@@ -28,10 +34,10 @@
                     <nav>
                         <ul>
                             <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="#">Servicios</a></li>
-                            <li><a href="#">Portafolio</a></li>
-                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#servicio">Servicios</a></li>
+                            <li><a href="#works">Portafolio</a></li>
+                            <li><a href="#contact">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -209,7 +215,7 @@
                     <p>Solicite o realice su consulta de nuestros servicios, un personal de atención al cliente le respondera dentro de 24 horas.</p>
                     <ul>
                         <li><i class="fa fa-map-marker"></i></li>
-                        <li>Los pollitos MZ H-1</li>
+                        <li>Ica - Los pollitos MZ H-1</li>
                     </ul>
                     <ul>
                         <li><i class="fa fa-whatsapp"></i></li>
@@ -217,23 +223,25 @@
                     </ul>
                     <ul>
                         <li><i class="fa fa-envelope-o"></i></li>
-                        <li>CAD@gmail.com</li>
+                        <li>codinganddesigning@gmail.com</li>
                     </ul>
                     <ul>
                         <li><i class="fa fa-globe"></i></li>
-                        <li>www.CodingAndDesigning.com</li>
+                        <li>www.codinganddesignning.com</li>
                     </ul>
                 </div>
-                <div class="form">
-                    <form action="">
-                        <input type="text" placeholder="Nombre">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Asunto">
-                        <input type="text" placeholder="Sitio Web">
-                        <textarea placeholder="Mensaje"></textarea>
-                        <input type="submit" value="Enviar">
+                <div  class="form">
+                    <form id="app" action="mailto:">
+                        <input class="field" id="nomb" type="text" v-model="from_name" placeholder="Nombre">
+                        <input class="field" id="correo" type="email" v-model="from_email" placeholder="Email">
+                        <input id="asunto" type="text" v-model="subject" placeholder="Asunto">
+                        <input id="sitio_web" type="text" placeholder="Sitio Web">
+                        <textarea class="field" id="mensaje" v-model="message" placeholder="Mensaje"></textarea>
+                        <input type="button" @click="enviar" value="Enviar" onclick="limpiar();">
                     </form>
                 </div>
+                <script src="scripts/app.js" type="text/javascript"></script>
+
             </div>
         </div>
     </section>
@@ -253,7 +261,7 @@
                     <li>
                         <h4>Social</h4>
                     </li>
-                    <li><i class="fa fa-facebook"></i></li>
+                    <li> <a href="https://www.facebook.com/Cod.And.Designing" target="_blank"> <i class="fa fa-facebook"></i></a></li>
                     <li><i class="fa fa-whatsapp"></i></li>
                     <li><i class="fa fa-instagram"></i></li>
                 </ul>
@@ -268,8 +276,10 @@
         </div>
     </footer>
 
-</body>
 
+    
+</body>
+<!--Fernandoo celakome-->
 
 
 </html>
